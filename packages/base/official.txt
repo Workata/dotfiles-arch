@@ -1,0 +1,135 @@
+### ------------------------------------- CORE TOOLS ---------------------------------------------------
+git
+less
+unzip
+make        # command builder/runner
+just        # command builder/runner v2
+just-lsp    # language server for just
+base-devel  # Basic tools to build Arch Linux packages
+sudo
+ffmpeg      # videos
+fzf         # finder
+bash-completion
+reflector           # retrieve the latest mirror list from the Arch Linux Mirror Status
+
+
+### ------------------------------------- PROGRAMMING LANGUAGES ---------------------------------------
+go
+python
+jdk25-openjdk	       # OpenJDK Java 25 development kit
+
+### programming related
+docker
+uv              # python project manager
+shellcheck      # static checks (linter) for shell scripts
+shfmt           # shell formatter
+nodejs          # JavaScript runtime environment
+npm             # package manager for Node
+pre-commit      # pre commit hooks
+
+### ------------------------------------- TEXT EDITORS + IDEs -------------------------------------------
+vi
+vim
+
+
+### ------------------------------------- FONTS & ICONS --------------------------------------------------
+ttf-arimo-nerd
+ttf-font-awesome
+ttf-nerd-fonts-symbols
+ttf-0xproto-nerd
+ttf-liberation
+ttf-dejavu
+ttf-roboto
+ttf-jetbrains-mono
+ttf-jetbrains-mono-nerd
+ttf-fira-code
+ttf-hack
+
+otf-codenewroman-nerd
+otf-font-awesome
+
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
+
+
+### ------------------------------------- THEMES --------------------------------------------------
+gnome-themes-extra
+gsettings-desktop-schemas
+
+
+### ------------------------------------- SHELL --------------------------------------------------
+zsh
+
+
+### ------------------------------------- BLUETOOTH --------------------------------------------------
+bluez
+bluez-utils
+bluez-deprecated-tools
+bluetui     # bt management with TUI
+blueman     # bt management with GUI
+
+
+### ------------------------------------- WIFI --------------------------------------------------
+network-manager-applet
+
+
+### ------------------------------------- AUDIO CONTROL --------------------------------------------------
+pavucontrol
+
+
+### ------------------------------------- SYSTEM COMPONENTS --------------------------------------
+hyprland
+hyprpaper       # wallpaper
+hyprlock        # lockscreen
+hyprshutdown    # graceful shutdown utility for Hyprland
+hyprpicker      # color picker
+waybar          # toolbar
+yazi            # (TUI) file manager
+nautilus        # (GUI) file manager
+loupe           # image viewer
+swaync          # notification daemon
+
+
+### ------------------------------------- GENERAL APPS ----------------------------------------------------
+firefox     # default browser
+vivaldi     # fallback browser (chromium)
+discord     # comms
+obsidian    # note taking app
+mpv         # video player
+obs-studio  # recordings
+pinta       # paint like program
+gimp        # image editing
+
+
+### ------------------------------------- UTILS ----------------------------------------------------
+sbctl       # Secure Boot key manager
+
+
+### ------------------------------------- SCREENSHOTS / PRINTSCREEN ----------------------------------------
+grim
+slurp
+satty
+wl-clipboard
+
+
+### ------------------------------------------- OTHERS ----------------------------------------
+nwg-look
+brightnessctl
+networkmanager
+pipewire-pulse
+xorg-xwininfo
+
+
+### ------------------------------------------- DEPS ----------------------------------------
+# deps for sddm (display manager for login) theme
+qt5-quickcontrols2
+qt5-graphicaleffects
+qt5-svg
+
+# dep for cursor (sddm)
+xorg-xsetroot
+
+# deps for discrod on firefox
+speech-dispatcher

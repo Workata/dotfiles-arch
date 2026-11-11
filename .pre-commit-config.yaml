@@ -1,0 +1,10 @@
+
+repos:
+  - repo: builtin
+    hooks:
+    - id: trailing-whitespace       # ? trims trailing whitespace
+    - id: end-of-file-fixer         # ? ensures that a file is either empty, or ends with one newline
+    - id: check-yaml                # ? checks yaml files for parseable syntax
+    - id: check-added-large-files   # ? check-added-large-files
+    - id: check-toml                # ? checks toml files for parseable syntax
+    - id: detect-private-key        # ? detects the presence of private keys

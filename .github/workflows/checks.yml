@@ -1,0 +1,20 @@
+name: Checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  sh-checker:
+    name: Shellcheck + Shfmt
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run the sh-checker
+      uses: luizm/action-sh-checker@master
+      env:
+        # SHELLCHECK_OPTS: -s sh -o all -e 2250
+        # https://github.com/mvdan/sh/blob/master/cmd/shfmt/shfmt.1.scd#options
+        SHFMT_OPTS: -i 4 -ci -d

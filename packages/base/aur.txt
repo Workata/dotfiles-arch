@@ -1,0 +1,19 @@
+### ------------------------------------- SYSTEM COMPONENTS --------------------------------------
+vicinae                 # application launcher
+wlogout                 # logout menu
+
+### ------------------------------------- APPS --------------------------------------
+spotify
+ani-cli
+# lobster-git # archived :(
+
+### ------------------------------------- IDE ---------------------------------------
+visual-studio-code-bin
+
+### ------------------------------------- PROGRAMMING RELATED -----------------------
+apache-spark    # spark
+prek            # better pre-commit
+
+### ------------------------------------- OTHERS --------------------------------------
+downgrade
+waycal # calendar with waybar integration

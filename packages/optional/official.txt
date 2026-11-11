@@ -1,0 +1,10 @@
+### ------------------------------------- GENERAL APPS -------------------------------------------
+steam       # GAMING ON LINUX (enable multilib repository)
+
+
+### ------------------------------------- FUNNY :> --------------------------------------------------
+fastfetch
+cmatrix
+cava
+cowsay
+fortune-mod

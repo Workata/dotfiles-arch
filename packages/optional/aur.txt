@@ -1,0 +1,7 @@
+### ------------------------------------- FUNNY --------------------------------------
+cbonsai
+pipes.sh
+
+### ------------------------------------- GAMES --------------------------------------
+# osu-lazer (apparently this is not an official release?)
+osu-lazer-bin

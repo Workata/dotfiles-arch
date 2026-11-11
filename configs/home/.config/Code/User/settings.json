@@ -1,0 +1,12 @@
+{
+    "workbench.startupEditor": "none",
+    "workbench.settings.applyToAllProfiles": [
+        "editor.fontSize"
+    ],
+    "window.zoomLevel": 0.9,
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "markdown-preview-enhanced.codeBlockTheme": "auto.css",
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+    "workbench.colorTheme": "Dark Modern",
+    "explorer.confirmDelete": false
+}

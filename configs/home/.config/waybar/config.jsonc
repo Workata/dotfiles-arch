@@ -1,0 +1,140 @@
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 40, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock#time",
+        "clock#date",
+        "custom/waycal",
+        "custom/power"
+    ],
+    "modules-right": [
+        "hyprland/language",
+        "pulseaudio",
+        "custom/wifi",
+        "custom/bluetooth",
+        "battery",
+        "custom/notification"
+    ],
+    "hyprland/language": {
+        "format": " {}",
+        "format-en": "EN",
+        "format-pl": "PL",
+        "on-click": "hyprctl switchxkblayout current next"
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        // TODO on-click switch workspaces
+        // "on-click": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = {name} }))'",
+        "all-outputs": true,
+        "format": "{id}",
+        "format-icons": {
+            "active": "|",
+            "default": ""
+        }
+    },
+    "clock#time": {
+        "format": "{:%H:%M}",
+        "tooltip": false
+    },
+
+    "clock#date": {
+        "format": "{:%Y-%m-%d}",
+        "tooltip": true,
+        "tooltip-format": "Calendar",
+        "on-click": "pkill -x waycal || waycal"
+        // "tooltip": true,
+        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    // "custom/waycal": {
+    //     "format": "󰃭 ",
+    //     "on-click": "pkill -x waycal || waycal",
+    //     "tooltip-format": "Calendar"
+    // },
+    "battery": {
+        "bat": "BAT0", // Change to BAT1 if needed
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁 Muted",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"],
+            "headphone": "󰋋",
+            "headset": "󰋋"
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    // swaync notifications panel
+    "custom/notification": {
+        "tooltip": true,
+        "tooltip-format": "Notifications",
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "custom/bluetooth": {
+        "format": "",
+        "on-click": "blueman-manager",
+        "tooltip": true,
+        "tooltip-format": "Bluetooth"
+    },
+    "custom/wifi": {
+        "format": " ",
+        "on-click": "nm-connection-editor",
+        "tooltip": true,
+        "tooltip-format": "Wi-Fi"
+    },
+    "custom/power": {
+        "format": " 󰐥 ",
+        "tooltip": true,
+        "tooltip-format": "logout menu",
+        "on-click": "wlogout --protocol layer-shell"
+    }
+}
